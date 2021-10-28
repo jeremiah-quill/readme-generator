@@ -1,9 +1,13 @@
-# 2
+# ${title}
+
+![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
+
+​
 
 ## Description
 
 ​
-3
+${description}
 ​
 
 ## Table of Contents
@@ -29,20 +33,27 @@
 To install necessary dependencies, run the following command:
 ​
 
+```
 npm i
+```
 
 ​
 
 ## Usage
 
 ​
-5
+${usage}
 ​
+
+## License
+
+​
+${renderLicenseSection()}
 
 ## Contributing
 
 ​
-6
+${contributing}
 ​
 
 ## Tests
@@ -51,11 +62,13 @@ npm i
 To run tests, run the following command:
 ​
 
+```
 npm test
+```
 
 ​
 
 ## Questions
 
 ​
-If you have any questions about the repo, open an issue or contact me directly at jcq50102@gmail.com. You can find more of my work at [1](https://github.com/1/).
+If you have any questions about the repo, open an issue or contact me directly at ${email}. You can find more of my work at [${github}](https://github.com/${github}/).

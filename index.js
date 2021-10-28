@@ -1,31 +1,29 @@
-// TODO: Include packages needed for this application
+// Packages needed for this application
+const inquirer = require("inquirer");
+const fs = require("fs");
 const generateMarkdown = require("./utils/generateMarkdown.js");
-// const {renderLicenseBadge, renderLicenseLink, renderLicenseSection} = generateMarkdown.
+const questions = require("./questions.js");
 
-// TODO: Create an array of questions for user input
-const questions = [
-  "What is the title of your project?",
-  "Provide a short description explaining the what, why, and how of your project.",
-  "What are the steps required to install your project?",
-  "Provide instructions and examples for use.",
-  "List your collaborators, if any, with links to their GitHub profiles.  If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.",
-];
+// Create a function to write README file
+function writeToFile(fileName, data) {
+  fs.writeFile(fileName, data, (err) => {
+    if (err) {
+      console.log(err);
+    }
+  });
+}
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
-// TODO: Create a function to initialize app
-function init() {}
+// Create a function to initialize app
+function init() {
+  inquirer
+    .prompt(questions)
+    .then((answers) => {
+      writeToFile("README.md", generateMarkdown(answers));
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+}
 
 // Function call to initialize app
 init();
-
-let data = {
-  title: "My Title",
-  description: "My description",
-  installation: "My installation",
-  usage: "My usage",
-  contributing: "my contributors",
-};
-
-generateMarkdown(data);
