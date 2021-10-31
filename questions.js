@@ -1,4 +1,5 @@
-// TODO: Create an array of questions for user input
+const licenses = require("./licenses.js");
+
 const questions = [
   {
     type: "input",
@@ -23,7 +24,7 @@ const questions = [
   },
   {
     type: "input",
-    message: "What are the steps required to install your project?",
+    message: "Please provide a command for installation:",
     name: "installation",
   },
   {
@@ -33,9 +34,20 @@ const questions = [
   },
   {
     type: "input",
+    message: "Please provide a command for testing:",
+    name: "test",
+  },
+  {
+    type: "input",
     message:
-      "List your collaborators, if any, with links to their GitHub profiles.  If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.",
+      "Please provide instructions on how to contribute to this project:",
     name: "contributing",
+  },
+  {
+    type: "list",
+    message: "Please choose a license for your project to be covered under:",
+    choices: licenses.map((license) => license.name),
+    name: "license",
   },
 ];
 

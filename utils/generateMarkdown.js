@@ -1,38 +1,37 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {
-  license ? "return license badge" : "";
-}
+const licenses = require("../licenses.js");
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {
-  license ? "return license link" : "";
-}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {
-  license ? "return license section" : "";
-}
-
-// TODO: Create a function to generate markdown for README
+// Generates markdown based on answers passed in from inquirer prompts
 const generateMarkdown = (data) => {
-  const { title, description, usage, contributing, email, github } = data;
+  const {
+    title,
+    description,
+    usage,
+    contributing,
+    installation,
+    test,
+    email,
+    github,
+    license,
+  } = data;
+
+  const chosenLicense = licenses.find((item) => item.name == license);
+
   return `
 # ${title}
 
 
+
 ## Description
+![License: ${chosenLicense.name}](${chosenLicense.badge})
 
 ​
 ${description}
 ​
 
+
 ## Table of Contents
 
 ​
-
 - [Installation](#installation)
   ​
 - [Usage](#usage)
@@ -46,29 +45,39 @@ ${description}
 - [Questions](#questions)
   ​
 
+
 ## Installation
 
 ​
 To install necessary dependencies, run the following command:
 ​
 
+\`\`\`
+${installation}
+\`\`\`
 
-npm i
 
-
-​
 
 ## Usage
 
 ​
 ${usage}
+
+
+
+## License
+
+
+This project is covered under [${chosenLicense.name}](${chosenLicense.link}).
 ​
 
-## Contributing
+
+## Contribution Guidelines
 
 ​
 ${contributing}
 ​
+
 
 ## Tests
 
@@ -76,12 +85,12 @@ ${contributing}
 To run tests, run the following command:
 ​
 
-
-npm test
+\`\`\`
+${test}
+\`\`\`
 
 
 ​
-
 ## Questions
 
 ​
