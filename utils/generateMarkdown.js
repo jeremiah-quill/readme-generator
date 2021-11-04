@@ -6,7 +6,7 @@ const generateMarkdown = (data) => {
     title,
     description,
     usage,
-    contributing,
+    contributions,
     installation,
     test,
     email,
@@ -18,11 +18,12 @@ const generateMarkdown = (data) => {
 
   return `
 # ${title}
+![License: ${chosenLicense.name}](${chosenLicense.badge})
 
 
 
 ## Description
-![License: ${chosenLicense.name}](${chosenLicense.badge})
+
 
 ​
 ${description}
@@ -38,7 +39,7 @@ ${description}
   ​
 - [License](#license)
   ​
-- [Contributing](#contributing)
+- [Contributions](#contributions)
   ​
 - [Tests](#tests)
   ​
@@ -72,10 +73,10 @@ This project is covered under [${chosenLicense.name}](${chosenLicense.link}).
 ​
 
 
-## Contribution Guidelines
+## Contributions
 
 ​
-${contributing}
+${contributions}
 ​
 
 

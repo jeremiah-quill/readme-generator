@@ -1,19 +1,15 @@
 
-# test
+# readme-generator
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
 
 
 ## Description
-![License: Apache License 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)
+
 
 ​
-test
+A command line to which takes user input and generates a quality README.
 ​
-
-
-
-
-
 
 
 ## Table of Contents
@@ -25,7 +21,7 @@ test
   ​
 - [License](#license)
   ​
-- [Contributing](#contributing)
+- [Contributions](#contributions)
   ​
 - [Tests](#tests)
   ​
@@ -40,7 +36,7 @@ To install necessary dependencies, run the following command:
 ​
 
 ```
-test
+npm i
 ```
 
 
@@ -48,21 +44,21 @@ test
 ## Usage
 
 ​
-test
+Use before creating a new repo.
 
 
 
 ## License
 
 
-This project is covered under [Apache License 2.0](https://opensource.org/licenses/Apache-2.0).
+This project is covered under [MIT](https://opensource.org/licenses/MIT).
 ​
 
 
-## Contribution Guidelines
+## Contributions
 
 ​
-test
+No contributions necessary
 ​
 
 
@@ -73,7 +69,7 @@ To run tests, run the following command:
 ​
 
 ```
-test
+npm test
 ```
 
 
@@ -81,5 +77,5 @@ test
 ## Questions
 
 ​
-If you have any questions about the repo, open an issue or contact me directly at test. You can find more of my work at [test](https://github.com/test/).
+If you have any questions about the repo, open an issue or contact me directly at jcq5010@gmail.com. You can find more of my work at [jeremiah-quill](https://github.com/jeremiah-quill/).
 
