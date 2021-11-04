@@ -8,7 +8,9 @@
 
 
 ​
-A command line to which takes user input and generates a quality README.
+A command line to which takes user input and generates a quality README.  A video demo can be seen [here:](https://youtu.be/tSZN8J-ziy0)
+
+
 ​
 
 
